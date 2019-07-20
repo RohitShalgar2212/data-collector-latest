@@ -1,0 +1,9 @@
+kind: Role
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  namespace: streamsets
+  name: streamsets-agent 
+rules:
+- apiGroups: ["", "extensions", "apps"]
+  resources: ["pods","secrets","deployments","apps",]
+  verbs: ["get", "watch", "list","create","update","delete"]
